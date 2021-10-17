@@ -16,4 +16,4 @@ DATASTRUCTURES
 3. Set
 4. Heap
 5. Tree
-6. Linkedkist
+6. Linkedlist
