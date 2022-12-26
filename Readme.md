@@ -1,0 +1,31 @@
+- Decrease by constant
+    - insertion sort
+    - topological sort
+- Decrease by a constant factor
+    - binary search
+    - fake coin problem
+    - Josephus Problem
+    - Russian Peasant Multiplication
+- Divide and conquer
+    - Matrix Multiplication of Large Integers
+    - Merge sort
+    - Quick sort
+    - Strassen’s Matrix Multiplication
+- Dynamic programming
+    - Knapsack problem and Memory Function
+    - Longest common Subsequence
+    - Matrix Chain Multiplication
+    - optimal binary search tree
+    - Warshall’s and Floyd’s Algorithms
+- GCD
+    - method 1
+    - method 2
+    - method 3
+- Greedy Approach
+    - Dijkstra
+    - Huffman Trees and codes
+    - Kruskal
+    - Prim's
+- Interpolation Search
+- Lomuto partitioning
+- The Game of Nim
