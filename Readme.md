@@ -32,6 +32,15 @@
 
 ---
 
+- Input/ Output
+- Variables/ Datatypes
+- Loops
+- Functions
+- Recursion
+- Array/ Vectors/ Pairs/ HashMaps
+
+---
+
 - Download cygwin/ mingw
 - Copy path of download location
 - Set environment variables -> Click PC -> properties -> advanced -> environment variables -> add `C:\MinGW\bin` path in Path varaible
@@ -46,6 +55,6 @@ obj.exe #to run
 ### C++
 
 ```bash
-g++ hello.c -o obj.exe #for compile
+g++ hello.cpp -o obj.exe #for compile
 obj.exe #to run
 ```

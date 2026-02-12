@@ -25,6 +25,10 @@ public:
     vector<int> twoSumHashTable(vector<int>& nums, int target) {
         // time complexity: O(n)
         // space complexity: O(n)
+
+        // 2 elements -> 4 integers, 20 elements -> 40
+        // 10^5 (lakh) -> 2x 10^5 elements -> 2 * 10^5 * 8byte -> 1600000 Bytes -> 1600 KB -> 1.6 MB
+        // 10^9 -> 1.6 * 10^4 -> 16000 MB -> 16GB (RAM)
         int n=nums.size();
         unordered_map<int,int> mp;
         for(int i=0;i<n;i++)
@@ -38,7 +42,7 @@ public:
     }
 
     vector<int> twoSumTwoPointers(vector<int>& nums, int target) {
-        // time complexity: O(n)
+        // time complexity: O(n) (Sorting O(nlogn))
         // space complexity: O(1)
         int n=nums.size();
         int i=0,j=n-1;
@@ -60,7 +64,7 @@ public:
     }
 };
 
-int main()
+int main() //Sorted Array or number/element asked (then sort urself)
 {
     int n;
     cout<<"Enter the number of elements: ";
