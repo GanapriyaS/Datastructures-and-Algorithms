@@ -1,6 +1,10 @@
 // Practise : https://leetcode.com/problems/two-sum/solution/
 // https://www.geeksforgeeks.org/cpp/map-vs-unordered_map-c/
 
+
+// array
+// we can sort
+// find pair
 #include<iostream>
 #include<vector>
 #include<algorithm>

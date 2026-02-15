@@ -4,6 +4,12 @@
 // { Driver Code Starts
 //Initial template for C++
 
+
+
+// array
+// sorted
+// remove duplicates
+
 #include <bits/stdc++.h>
 using namespace std;
 

@@ -1,5 +1,9 @@
 // Practise: https://leetcode.com/problems/squares-of-a-sorted-array/description/
 
+// array
+// sorted
+// merge 2 sorted array
+
 #include<iostream>
 #include<vector>
 #include<algorithm>
