@@ -1,0 +1,79 @@
+# Basics
+
+This directory contains basic C++ programming concepts, syntax examples, OOP concepts, and foundational practice problem sets.
+
+## Sub-Topics and Programs Index
+
+- **[Intro](./Intro)** - Introductory programming problems
+  - [hello_world.cpp](./Intro/hello_world.cpp) - Hello World
+  - [print_first_5_alphabets.cpp](./Intro/print_first_5_alphabets.cpp) - Print First 5 Alphabets
+  - [triangle.cpp](./Intro/triangle.cpp) - Triangle
+  - [print_z.cpp](./Intro/print_z.cpp) - Print Z
+  - [print_table_of_5.cpp](./Intro/print_table_of_5.cpp) - Print Table of 5
+  - [rectangle.cpp](./Intro/rectangle.cpp) - Rectangle
+  - [print_table_of_n.cpp](./Intro/print_table_of_n.cpp) - Print Table of N
+  - [calculator.cpp](./Intro/calculator.cpp) - Calculator
+  - [calculator_ii.cpp](./Intro/calculator_ii.cpp) - Calculator II
+  - [add_last_digits.cpp](./Intro/add_last_digits.cpp) - Add Last Digits
+  - [even_or_odd.cpp](./Intro/even_or_odd.cpp) - Even or Odd
+  - [factor.cpp](./Intro/factor.cpp) - Factor
+  - [multiple.cpp](./Intro/multiple.cpp) - Multiple
+  - [pass_or_fail.cpp](./Intro/pass_or_fail.cpp) - Pass or Fail
+  - [max_and_min_of_2_numbers.cpp](./Intro/max_and_min_of_2_numbers.cpp) - Max and Min of 2 Numbers
+  - [max_and_min_of_3_numbers.cpp](./Intro/max_and_min_of_3_numbers.cpp) - Max and Min of 3 Numbers
+  - [student_performance_evaluation.cpp](./Intro/student_performance_evaluation.cpp) - Student Performance Evaluation
+  - [find_the_location_point.cpp](./Intro/find_the_location_point.cpp) - Find the location point
+- **[Arrays](./Arrays)** - Basic array operations and concepts
+- **[2D Arrays](./2D%20Arrays)** - Two-dimensional array traversal and manipulations
+- **[Strings](./Strings)** - String handling basics
+- **[Functions](./Functions)** - Modular programming with functions
+- **[Loops](./Loops)** - Iteration control structures
+  - [print_1_to_n.cpp](./Loops/print_1_to_n.cpp) - Print 1 to N
+  - [print_n_to_1.cpp](./Loops/print_n_to_1.cpp) - Print N to 1
+  - [print_all_even_numbers_from_1_to_n.cpp](./Loops/print_all_even_numbers_from_1_to_n.cpp) - Print All Even Numbers from 1 to N
+  - [print_from_l_to_r.cpp](./Loops/print_from_l_to_r.cpp) - Print from L to R
+  - [print_all_uppercase_alphabets.cpp](./Loops/print_all_uppercase_alphabets.cpp) - Print All Uppercase Alphabets
+  - [print_table_of_n.cpp](./Loops/print_table_of_n.cpp) - Print Table of N
+  - [count_numbers.cpp](./Loops/count_numbers.cpp) - Count Numbers
+  - [sum_of_first_n_natural_numbers.cpp](./Loops/sum_of_first_n_natural_numbers.cpp) - Sum of First N Natural Numbers
+  - [factorial.cpp](./Loops/factorial.cpp) - Factorial
+  - [x_power_n.cpp](./Loops/x_power_n.cpp) - $x^n$
+  - [print_number_in_reverse.cpp](./Loops/print_number_in_reverse.cpp) - Print Number in Reverse
+  - [sum_of_digits.cpp](./Loops/sum_of_digits.cpp) - Sum of Digits
+  - [reverse_number_and_store_in_a_variable.cpp](./Loops/reverse_number_and_store_in_a_variable.cpp) - Reverse Number and Store in a Variable
+  - [palindrome.cpp](./Loops/palindrome.cpp) - Palindrome
+- **[Pattern Printing](./Pattern%20Printing/README.md)** - Printing star, number, and character patterns
+  - [2_stars.cpp](./Pattern%20Printing/2_stars.cpp) - 2-Stars
+  - [m_stars.cpp](./Pattern%20Printing/m_stars.cpp) - M-Stars
+  - [square.cpp](./Pattern%20Printing/square.cpp) - Square
+  - [hollow_square.cpp](./Pattern%20Printing/hollow_square.cpp) - Hollow Square
+  - [hollow_rectangle.cpp](./Pattern%20Printing/hollow_rectangle.cpp) - Hollow Rectangle
+  - [pyramid.cpp](./Pattern%20Printing/pyramid.cpp) - Pyramid
+  - [inverse_pyramid.cpp](./Pattern%20Printing/inverse_pyramid.cpp) - Inverse Pyramid
+  - [numbered_triangle.cpp](./Pattern%20Printing/numbered_triangle.cpp) - Numbered Triangle
+  - [binary_pyramid.cpp](./Pattern%20Printing/binary_pyramid.cpp) - Binary Pyramid
+  - [vertical_triangle.cpp](./Pattern%20Printing/vertical_triangle.cpp) - Vertical Triangle
+  - [hollow_vertical_triangle.cpp](./Pattern%20Printing/hollow_vertical_triangle.cpp) - Hollow Vertical Triangle
+  - [triangle.cpp](./Pattern%20Printing/triangle.cpp) - Triangle
+  - [hollow_triangle.cpp](./Pattern%20Printing/hollow_triangle.cpp) - Hollow Triangle
+  - [inverted_hollow_triangle.cpp](./Pattern%20Printing/inverted_hollow_triangle.cpp) - Inverted Hollow Triangle
+  - [diamond.cpp](./Pattern%20Printing/diamond.cpp) - Diamond
+  - [hollow_diamond.cpp](./Pattern%20Printing/hollow_diamond.cpp) - Hollow Diamond
+  - [crown.cpp](./Pattern%20Printing/crown.cpp) - Crown
+  - [butterfly.cpp](./Pattern%20Printing/butterfly.cpp) - Butterfly
+  - [inverted_diamond.cpp](./Pattern%20Printing/inverted_diamond.cpp) - Inverted Diamond
+- **[Classes](./Classes/README.md)** - Class definitions and basic object structures
+  - [copy_constructor.cpp](./Classes/copy_constructor.cpp) - Demonstrates OOP Copy Constructors
+  - [default_constructor.cpp](./Classes/default_constructor.cpp) - Demonstrates OOP Default Constructors
+  - [default_fun.cpp](./Classes/default_fun.cpp) - Shows usage of default arguments in functions
+  - [destructor.cpp](./Classes/destructor.cpp) - Shows class destructors and memory cleanup
+  - [friendfun.cpp](./Classes/friendfun.cpp) - Friend functions sharing class private members
+  - [friendfun1class.cpp](./Classes/friendfun1class.cpp) - A class-level friend function example
+  - [funoverloading.cpp](./Classes/funoverloading.cpp) - Standard function overloading demonstration
+  - [inline.cpp](./Classes/inline.cpp) - Inline functions for optimization
+  - [macro.cpp](./Classes/macro.cpp) - Macro preprocessors in C++
+  - [overloading.cpp](./Classes/overloading.cpp) - Advanced operator/function overloading
+  - [power.cpp](./Classes/power.cpp) - Program to calculate the power of a number
+  - [staticmem.cpp](./Classes/staticmem.cpp) - Static class members
+  - [staticvar.cpp](./Classes/staticvar.cpp) - Static variables in C++
+  - [student.cpp](./Classes/student.cpp) - A basic student class structure
