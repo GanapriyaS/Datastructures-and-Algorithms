@@ -1,0 +1,56 @@
+// G. Inverse Pyramid
+// time limit per test1 second
+// memory limit per test256 megabytes
+// You are given a positive integer n.
+
+// Print an inverse pyramid pattern consisting of n rows.
+
+// Input
+// The input contains a single integer n (1≤n≤2⋅103).
+
+// Output
+// Print n lines, as given in the example
+
+// Examples
+// Input
+// 3
+// Output
+// ***
+// **
+// *
+// Input
+// 5
+// Output
+// *****
+// ****
+// ***
+// **
+// *
+// Input
+// 8
+// Output
+// ********
+// *******
+// ******
+// *****
+// ****
+// ***
+// **
+// *
+
+
+#include <iostream>
+using namespace std;
+int main() {
+   int n;
+   cin >> n ;
+   for(int i=0;i<n;i++){
+       for(int j=i;j<n;j++){
+           
+       cout<<"*";
+       }
+          cout<<"\n";
+   }
+ 
+    return 0;
+}
