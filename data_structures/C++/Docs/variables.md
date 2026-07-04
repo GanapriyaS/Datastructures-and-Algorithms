@@ -203,6 +203,29 @@ int main()
 
 `::` is called the **scope resolution operator**.
 
+
+- we cannot declare same variable in same scope like inside main
+
+```cpp
+int main()
+{
+    int x = 20;
+    int x = 5; // error
+    cout << x << endl;
+}
+```
+
+- garbage value
+
+```cpp
+int main()
+{
+    int x; 
+    cout << x << endl; // garbage value
+    x = 5;
+}
+```
+
 ### 6. Nested Block Scope
 
 ```cpp
@@ -529,7 +552,7 @@ Because **numbers have limits**.
 ### `int`
 
 - **Size:** 4 bytes
-- **Range:** `-2,147,483,648` to `2,147,483,647` (≈ 2 × 10⁹)
+- **Range:** `-2,147,483,648` to  (2^31 - 1)`2,147,483,647` (≈ 2 × 10⁹)
 
 ```cpp
 int x = 1000000000;
@@ -550,7 +573,7 @@ long long x = 1000000000000;
 int x = 2000000000; // 2 * 10^9
 x = x + 1000000000;
 
-cout << x << endl;  // Wrong output due to overflow
+cout << x << endl;  // Wrong output due to overflow (integer overflow get garbage value)
 ```
 
 ### Use `long long` When:
@@ -606,6 +629,14 @@ int main()
 
 - Understand `int` and `long long` first
 - Use the hack later
+
+```cpp
+int main(){
+    return 0; // no error
+
+    return 12; /// runtime error
+}
+```
 
 ---
 
@@ -837,3 +868,10 @@ cout << x << endl;
 - `long long` prevents overflow (≈ 9 × 10¹⁸); use it for large numbers.
 - Short-circuit evaluation skips the second operand of `&&`/`||` when the result is already known — useful for safe checks like avoiding division by zero.
 - Keep variable scope as small as possible and prefer local over global variables.
+
+
+This difference exists because global and local variables are stored in entirely different areas of computer memory with distinct size limits.
+
+Local Variables: These are allocated on the stack, which has a strict, limited size (typically 1 MB to 8 MB depending on the OS). An array of 10⁵ integers fits, but 10⁷ integers (40 MB) will cause a stack overflow.
+
+Global Variables: These are allocated on the data segment (or heap). The data segment has a much larger size limit, often limited only by your computer's available physical RAM.If you need to use large amounts of memory locally without making variables global, you can allocate the memory on the heap using dynamic memory (e.g., int* arr = new int[10000000]; or std::vector<int> arr(10000000);).
