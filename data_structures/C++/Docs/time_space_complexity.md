@@ -135,6 +135,22 @@ This loop runs **N iterations** → **O(N)**.
 36 → (1,36) (2,18) (3,12) (4,9) (6,6)
 ```
 
+```
+12
+---------
+i     N/i
+1  <  12
+2  <  6
+3  <  4
+---------
+4  >  3
+6  >  2
+12 >  1
+
+i ≤ N/i
+
+```
+
 So we only need to loop `i` while `i ≤ N/i`. Since:
 
 $$i \le \frac{N}{i} \;\Rightarrow\; i^2 \le N \;\Rightarrow\; \boxed{i \le \sqrt{N}}$$
