@@ -282,15 +282,19 @@ while (startRow <= endRow && startCol <= endCol)
     }
 
     // End Row: i = endRow, j → endCol-1 … startCol
-    for (int j = endCol - 1; j >= startCol; j--)
-    {
-        cout << arr[endRow][j] << " ";
+    if(startRow != endRow){ // to handle single row 
+      for (int j = endCol - 1; j >= startCol; j--)
+      {
+          cout << arr[endRow][j] << " ";
+      }
     }
 
     // Start Col: j = startCol, i → endRow-1 … startRow+1
-    for (int i = endRow - 1; i >= startRow + 1; i--)
-    {
-        cout << arr[i][startCol] << " ";
+    if(startCol != endCol ){ // to handle single col
+      for (int i = endRow - 1; i >= startRow + 1; i--)
+      {
+          cout << arr[i][startCol] << " ";
+      }
     }
 
     // move into the next layer
