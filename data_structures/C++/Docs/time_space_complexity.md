@@ -237,6 +237,17 @@ while (i < N) { i = i * 3; }   // log3N iterations  (1→3→9→27)
 for (int i = 1; i <= N; i++)
     for (int j = 1; j <= N; j++)
         print(i + j);
+
+
+i   j       total iterations
+-----------------------------
+1   1 - N   N
+2   1 - N   N
+.
+.
+N   1 - N   N 
+-----------------------------
+            N * N = N^2
 ```
 
 ```cpp
@@ -245,6 +256,17 @@ for (int i = 1; i <= N; i++)
     for (int j = 1; j <= i; j++)
         print(i + j);
 // = N(N+1)/2 → still O(N²)
+
+i   j       total iterations
+-----------------------------
+1   1 - 1   1
+2   1 - 2   2
+3   1 - 3   3
+.
+.
+N   1 - N   N 
+-----------------------------
+sum of N natural numbers = N(N*1) / 2
 ```
 
 ---
