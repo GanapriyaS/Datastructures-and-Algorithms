@@ -210,9 +210,9 @@ while (i > 1)
 {
     i = i / 2;
 }
-// N = 16 → 4 steps (16→8→4→2→1)
-// N = 32 → 5 steps
-// N = 4096 → 12 steps
+// N = 16 → 4 steps (16→8→4→2→1) ( 2^4 = 16 )
+// N = 32 → 5 steps ( 2^5 = 32 )
+// N = 4096 → 12 steps ( 2^12 = 4096 )
 ```
 
 Why? After `k` halvings we reach 1: `2^k = N ⇒ k = log₂N`. It is **not** `N` and **not** `√N` — it's `log₂N`.
