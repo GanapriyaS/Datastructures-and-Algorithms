@@ -340,3 +340,138 @@ $$O(1) < O(\log N) < O(\sqrt{N}) < O(N) < O(N\log N) < O(N\sqrt{N}) < O(N^2) < O
 | `O(N!)` | factorial | permutations |
 
 > Every algorithm is analysed on two axes: **Time Complexity (TC)** and **Space Complexity (SC)**.
+
+--- 
+
+## Time Complexity
+
+1. Find the # of iterations in terms of input size (N)
+2. Remove the constants
+3. Remove the lower contribution terms
+
+**Examples:**
+
+1. `5N² + 2N + 10` → `O(N²)`
+2. `11N³ + 12N² + 13N + 17000` → `O(N³)`
+
+### Loop analysis examples
+
+**1)**
+```c
+for (i = 1; i <= N; i++)
+{
+    ...
+}
+```
+→ `O(N)` (assuming `N > 0`)
+
+**2)**
+```c
+for (i = 1; i <= N; i--)
+{
+    ...
+}
+```
+→ `O(∞)` — Infinite loop
+
+**3)**
+```c
+for (i = 1; i <= N; i *= 2)
+{
+    ...
+}
+```
+→ `O(log N)` — sequence: 1 → 2 → 4 → 8 → 16 → 32 → 64 ...
+
+**4) Nested loop**
+```c
+for (i = 1; i <= N; i++)
+{
+    for (j = 1; j <= i; j++)
+    {
+        ...
+    }
+}
+```
+
+Table of iterations of inner loop `#itr` per `i`:
+
+| i | j range | #itr |
+|---|---|---|
+| 1 | 1–1 | 1 |
+| 2 | 1–2 | 2 |
+| 3 | 1–3 | 3 |
+| 4 | 1–4 | 4 |
+| ... | ... | ... |
+| N | 1–N | N |
+
+Total = `N(N+1)/2 = N²/2 + N/2` → `O(N²)`
+
+---
+
+## Importance of Constraints
+
+Which complexities are feasible depends on N (assuming ~10⁷–10⁸ operations per second):
+
+| Constraint | O(N³) | O(N²) | O(N√N) | O(N) | O(√N) | O(log N) | O(1) |
+|---|---|---|---|---|---|---|---|
+| N ≤ 10¹⁸ | ✗ | ✗ | ✗ | ✗ | ✗ | ✓ | ✓ |
+| N ≤ 10⁹ | ✗ | ✗ | ✗ | ✗ (borderline) | ✓ | ✓ | ✓ |
+| N ≤ 10⁷ | ✗ | ✗ | ✗ | ✓ | ✓ | ✓ | ✓ |
+| N ≤ 10⁵ | ✗ | ✗ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| N ≤ 10⁴ | ✗ | ✓ (maybe) | ✓ | ✓ | ✓ | ✓ | ✓ |
+| N ≤ 10³ | ✗ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| N ≤ 10² | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+
+Rule of thumb: ~10⁷–10⁸ iterations run in about 1 second.
+
+---
+
+## Space Complexity
+
+1. Find the **MAX SPACE UTILISED AT ANY POINT** in terms of input size (N)
+2. Remove the constants
+3. Remove the lower contribution terms
+
+Example: variables of sizes 3 + 2 + 1 + 4 + 2 = 12 MB (not 4 MB — take the sum/max utilized at any point in time, not just one variable).
+
+Space usage over time can rise and fall (graph of space vs. time) — space complexity considers the maximum point reached.
+
+### Rule of thumb
+- **Loop → Time Complexity (TC)**
+- **Array → Space Complexity (SC)**
+
+```c
+int A[N];
+for (i = 0; i < N; i++)
+{
+    ...
+}
+```
+→ TC: `O(N)`, SC: `O(N)`
+
+```c
+int A[N][M];
+for (i = 0; i < N; i++)
+{
+    for (j = 0; j < M; j++)
+    {
+        ...
+    }
+}
+```
+→ TC: `O(N*M)`, SC: `O(N*M)`
+
+**Note:** If the array is declared *inside* the outer loop (reallocated each iteration and not retained), the space complexity can drop:
+```c
+for (i = 0; i < N; i++)
+{
+    int A[N];
+    for (j = 0; j < M; j++)
+    {
+        ...
+    }
+}
+```
+→ TC: `O(N*M)`, **SC: `O(N)`** (array is reused/discarded per outer iteration, not accumulated as N×M)
+
