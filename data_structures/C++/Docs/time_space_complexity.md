@@ -225,6 +225,11 @@ int i = 0;
 while (i <= N) { i = i * 2; }  // ❌ INFINITE (0 * 2 = 0, i never grows)
 ```
 
+```cpp
+int i = 1;
+while (i < N) { i = i * 3; }   // log3N iterations  (1→3→9→27)
+```
+
 **Nested loops:**
 
 ```cpp
