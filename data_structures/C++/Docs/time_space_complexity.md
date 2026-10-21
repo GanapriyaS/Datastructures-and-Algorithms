@@ -130,7 +130,7 @@ This loop runs **N iterations** → **O(N)**.
 **Key insight — factors come in pairs.** If `i` divides `N`, then so does `j = N / i`, and `i × j = N`.
 
 ```
-12 → (1,12) (2,6) (3,4)
+12 → (1,12) = 12,  (2,6) = 12,  (3,4) = 12
 18 → (1,18) (2,9) (3,6)
 36 → (1,36) (2,18) (3,12) (4,9) (6,6)
 ```
