@@ -4,30 +4,29 @@ Combined notes: the **concepts + problem set** (Arrays deck) and the **worked so
 
 ## Table of Contents
 - **Concepts**
-  1. [Why Arrays? (Storing marks of N students)](#1-why-arrays--storing-marks-of-n-students)
+  1. [Why Arrays? (Storing marks of N students)](#1-why-arrays--storing-marks-of-n-students) <br></br>
   2. [What is an Array?](#2-what-is-an-array)
   3. [Creating an Array](#3-creating-an-array)
   4. [Accessing Elements](#4-accessing-elements)
   5. [Input / Output](#5-input--output)
+  
 - **Problems (with solutions)**
   6. [Print Array in Reverse](#6-print-array-in-reverse)
-  7. [Find Max of the Array](#7-find-max-of-the-array) ✅
+  7. [Find Max of the Array](#7-find-max-of-the-array) 
   8. [Find Min of the Array](#8-find-min-of-the-array)
   9. [Search in an Array](#9-search-in-an-array)
-  10. [Count Occurrences](#10-count-occurrences) ✅
-  11. [Check if the Array is Sorted](#11-check-if-the-array-is-sorted) ✅
-  12. [Sort 0s and 1s (Sort 01)](#12-sort-0s-and-1s-sort-01) ✅
-  13. [Swap 2 Numbers](#13-swap-2-numbers) ✅
-  14. [Swap Alternate](#14-swap-alternate) ✅
-  15. [Reverse in the Same Array](#15-reverse-in-the-same-array) ✅
-  16. [Missing / Special Number](#16-missing--special-number) ✅
+  10. [Count Occurrences](#10-count-occurrences) 
+  11. [Check if the Array is Sorted](#11-check-if-the-array-is-sorted) 
+  12. [Sort 0s and 1s (Sort 01)](#12-sort-0s-and-1s-sort-01) 
+  13. [Swap 2 Numbers](#13-swap-2-numbers) 
+  14. [Swap Alternate](#14-swap-alternate) 
+  15. [Reverse in the Same Array](#15-reverse-in-the-same-array) 
+  16. [Missing / Special Number](#16-missing--special-number) 
   17. [Intersection of Two Arrays](#17-intersection-of-two-arrays)
   18. [Pair Sum](#18-pair-sum)
   19. [Triplet Sum](#19-triplet-sum)
   20. [Quadruplet Sum](#20-quadruplet-sum)
-  21. [Find HCF (using a function)](#21-find-hcf-using-a-function) ✅
-
-> ✅ = a handwritten solution was provided in the answers deck.
+  21. [Find HCF (using a function)](#21-find-hcf-using-a-function) 
 
 ---
 
@@ -193,7 +192,7 @@ for (int i = n - 1; i >= 0; i--)
 
 ---
 
-## 7. Find Max of the Array ✅
+## 7. Find Max of the Array 
 
 ```
 Input:  6
@@ -275,7 +274,7 @@ cout << (found ? "FOUND" : "NOT FOUND");
 
 ---
 
-## 10. Count Occurrences ✅
+## 10. Count Occurrences 
 
 ```
 Input:  6 7           Input:  6 8
@@ -312,7 +311,7 @@ cout << count << endl;
 
 ---
 
-## 11. Check if the Array is Sorted ✅
+## 11. Check if the Array is Sorted 
 
 ```
 Input:  6                    Input:  6
@@ -358,7 +357,7 @@ else
 
 ---
 
-## 12. Sort 0s and 1s (Sort 01) ✅
+## 12. Sort 0s and 1s (Sort 01) 
 
 The array contains **only 0s and 1s**. Print it in ascending order.
 
@@ -402,7 +401,7 @@ for (int i = 1; i <= c1; i++)
 
 ---
 
-## 13. Swap 2 Numbers ✅
+## 13. Swap 2 Numbers 
 
 ```
 Input:  A = 2, B = 5
@@ -427,7 +426,7 @@ After:   A = 4   B = 7
 
 ---
 
-## 14. Swap Alternate ✅
+## 14. Swap Alternate 
 
 Swap elements in pairs: `(0,1), (2,3), (4,5) …`
 
@@ -448,7 +447,7 @@ for (int i = 1; i < n; i += 2)
 
 ---
 
-## 15. Reverse in the Same Array ✅
+## 15. Reverse in the Same Array 
 
 Reverse the array **in place** (do not use a second array).
 
@@ -480,7 +479,7 @@ for (int i = 0; i < n; i++)
 
 ---
 
-## 16. Missing / Special Number ✅
+## 16. Missing / Special Number 
 
 Every number in the array is present **twice**, except for **one special element** that occurs **only once**. Find it.
 
@@ -648,7 +647,7 @@ cout << count;
 
 ---
 
-## 21. Find HCF (using a function) ✅
+## 21. Find HCF (using a function) 
 
 > **Problem.** You are given two integers `A` and `B` (`1 ≤ A, B ≤ 10⁵`). Find the HCF of `A` and `B` by writing a function that takes `A` and `B` as parameters and returns their HCF.
 >
