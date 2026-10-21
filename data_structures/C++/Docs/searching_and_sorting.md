@@ -1,13 +1,12 @@
 # Searching & Sorting 
 
-Combined notes from the **sort** whiteboard (searching + sorting algorithms) and the **offline video notes** (insertion sort + merging sorted arrays).
-
 ## Table of Contents
 - **Searching**
   1. [What is Searching?](#1-what-is-searching)
   2. [Linear Search](#2-linear-search)
   3. [Binary Search](#3-binary-search)
 - **Sorting**
+
   4. [What is Sorting?](#4-what-is-sorting)
   5. [Selection Sort](#5-selection-sort)
   6. [Bubble Sort](#6-bubble-sort)
