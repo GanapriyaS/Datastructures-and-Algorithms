@@ -9,36 +9,22 @@
   5. [Input / Output](#5-input--output)
   
 - **Problems (with solutions)**
+  
   6. [Print Array in Reverse](#6-print-array-in-reverse)
-  
   7. [Find Max of the Array](#7-find-max-of-the-array) 
-  
   8. [Find Min of the Array](#8-find-min-of-the-array)
-  
   9. [Search in an Array](#9-search-in-an-array)
-  
   10. [Count Occurrences](#10-count-occurrences) 
-  
   11. [Check if the Array is Sorted](#11-check-if-the-array-is-sorted) 
-  
   12. [Sort 0s and 1s (Sort 01)](#12-sort-0s-and-1s-sort-01) 
-  
   13. [Swap 2 Numbers](#13-swap-2-numbers) 
-  
   14. [Swap Alternate](#14-swap-alternate) 
-  
   15. [Reverse in the Same Array](#15-reverse-in-the-same-array) 
-  
   16. [Missing / Special Number](#16-missing--special-number) 
-  
   17. [Intersection of Two Arrays](#17-intersection-of-two-arrays)
-  
   18. [Pair Sum](#18-pair-sum)
-  
   19. [Triplet Sum](#19-triplet-sum)
-  
   20. [Quadruplet Sum](#20-quadruplet-sum)
-  
   21. [Find HCF (using a function)](#21-find-hcf-using-a-function) 
 
 ---
