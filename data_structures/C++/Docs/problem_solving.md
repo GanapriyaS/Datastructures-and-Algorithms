@@ -1,6 +1,6 @@
-# Mixed Problem Solving Session
+# Problem Solving
 
-Practice problems on **strings** and **2D arrays**, with worked traces and C++ solutions.
+ **strings** and **2D arrays**
 
 ## Table of Contents
 - **String Problems**
@@ -8,6 +8,7 @@ Practice problems on **strings** and **2D arrays**, with worked traces and C++ s
   2. [Compress String (Run-Length Encoding)](#2-compress-string-run-length-encoding)
   3. [Longest Word](#3-longest-word)
 - **2D Array Problems**
+
   4. [Diagonal Sum](#4-diagonal-sum)
   5. [Rotate Image (90° Clockwise)](#5-rotate-image-90-clockwise)
   6. [Spiral Matrix / Boundary Trace](#6-spiral-matrix--boundary-trace)
@@ -222,7 +223,7 @@ for (int j = 0; j < M; j++)
 > Print the matrix in **spiral order** (outer boundary first, then spiral inward).
 
 ```
- 1  2  3  4          Output: 1 2 3 4 5 6 ...
+ 1  2  3  4          Output: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
 14 15 16  5          (walk the outer ring clockwise,
 13 20 17  6           then move one layer in and repeat)
 12 19 18  7
