@@ -72,26 +72,6 @@ Sample lookups:
 - `(0, 7) → 35`
 - `(2, 6) → P[6] - P[1] = 27 - 8 = 19`
 
-Build a prefix sum array `P` such that:
-```
-P[i] = A[0] + A[1] + A[2] + ... + A[i]
-```
-
-Example:
-```
-A = [7,  1,  5, -3,  2, 10,  5,  8]
-     0   1   2   3   4   5   6   7
-
-P = [7,  8, 13, 10, 12, 22, 27, 35]
-     0   1   2   3   4   5   6   7
-```
-
-Sample lookups:
-- `(0, 5) → 22`
-- `(0, 3) → 10`
-- `(0, 7) → 35`
-- `(2, 6) → P[6] - P[1] = 27 - 8 = 19`
-
 **Derivation:**
 ```
 P[R] = A[0] + A[1] + ... + A[L-1] + A[L] + A[L+1] + ... + A[R]
@@ -141,194 +121,6 @@ for (i = 0; i < Q; i++)
 {
     int L, R;
     cin >> L >> R;
-
-    if (L == 0)
-    {
-        print(P[R]);
-    }
-    else
-    {
-        print(P[R] - P[L-1]);
-    }
-
-P[R] = A[0] + A[1] + ... + A[L-1] + A[L] + A[L+1] + ... + A[R]
-P[R] = (A[0] + A[1] + ... + A[L-1]) + (A[L] + A[L+1] + ... + A[R])
-P[R] = P[L-1] + ans
-```
-
-So:
-```
-ans = P[R] - P[L-1]
-```
-
-**Formula:**
-```
-Sum(L, R) = P[R]              if L == 0
-          = P[R] - P[L-1]     if L != 0
-```
-
-(Valid for `1 ≤ L ≤ R ≤ N` in 1-indexed terms, or `0 ≤ L ≤ R ≤ N-1` in 0-indexed terms.)
-
-### Building the prefix sum array
-
-```c
-int N;
-cin >> N;
-int A[N];
-for (i = 0; i < N; i++)
-{
-    cin >> A[i];
-}
-
-int P[N];
-sum = 0;
-for (i = 0; i < N; i++)
-{
-    sum += A[i];
-    P[i] = sum;
-}   // Building the Prefix Sum array
-```
-
-### Answering queries using prefix sum
-
-```c
-int Q;
-cin >> Q;
-for (i = 0; i < Q; i++)
-{
-    int L, R;
-    cin >> L >> R;
-
----
-
-## Range Sum Query
-
-Given array:
-```
-A = [7, 1, 5, -3, 2, 10, 5, 8]
-     0  1  2   3  4   5  6  7
-```
-
-Query `(L, R)` → `A[L] + A[L+1] + ... + A[R]`
-
-Constraints: `1 ≤ N ≤ 10⁵`, `1 ≤ Q ≤ 10⁵`
-
-Example queries:
-- `(1, 3)` → `A[1] + A[2] + A[3] = 3`
-- `(0, 4)` → `A[0] + A[1] + A[2] + A[3] + A[4] = 12`
-- `(5, 6)` → `A[5] + A[6] = 15`
-
-### Naive approach
-
-```c
-int N;
-cin >> N;
-int A[N];
-for (i = 0; i < N; i++)
-{
-    cin >> A[i];
-}
-
-int Q;
-cin >> Q;
-for (i = 0; i < Q; i++)
-{
-    int L, R;
-    cin >> L >> R;
-
-    sum = 0;
-    for (j = L; j <= R; j++)
-    {
-        sum += A[j];
-    }
-    print(sum);
-}
-```
-
-Time Complexity: `O(Q*N + N)` ≈ `O(Q*N)`. With `Q, N ~ 10⁵`, this gives `10⁵ × 10⁵ = 10¹⁰` → **TLE (Time Limit Exceeded)**.
-
-Space Complexity: `O(1)` (excluding input storage).
-
-### Prefix Sum approach
-
-Build a prefix sum array `P` such that:
-```
-P[i] = A[0] + A[1] + A[2] + ... + A[i]
-```
-
-Example:
-```
-A = [7,  1,  5, -3,  2, 10,  5,  8]
-     0   1   2   3   4   5   6   7
-
-P = [7,  8, 13, 10, 12, 22, 27, 35]
-     0   1   2   3   4   5   6   7
-```
-
-Sample lookups:
-- `(0, 5) → 22`
-- `(0, 3) → 10`
-- `(0, 7) → 35`
-- `(2, 6) → P[6] - P[1] = 27 - 8 = 19`
-
-**Derivation:**
-```
-P[R] = A[0] + A[1] + ... + A[L-1] + A[L] + A[L+1] + ... + A[R]
-P[R] = (A[0] + A[1] + ... + A[L-1]) + (A[L] + A[L+1] + ... + A[R])
-P[R] = P[L-1] + ans
-```
-
-So:
-```
-ans = P[R] - P[L-1]
-```
-
-**Formula:**
-```
-Sum(L, R) = P[R]              if L == 0
-          = P[R] - P[L-1]     if L != 0
-```
-
-(Valid for `1 ≤ L ≤ R ≤ N` in 1-indexed terms, or `0 ≤ L ≤ R ≤ N-1` in 0-indexed terms.)
-
-### Building the prefix sum array
-
-```c
-int N;
-cin >> N;
-int A[N];
-for (i = 0; i < N; i++)
-{
-    cin >> A[i];
-}
-
-int P[N];
-sum = 0;
-for (i = 0; i < N; i++)
-{
-    sum += A[i];
-    P[i] = sum;
-}   // Building the Prefix Sum array
-```
-
-### Answering queries using prefix sum
-
-```c
-int Q;
-cin >> Q;
-for (i = 0; i < Q; i++)
-{
-    int L, R;
-    cin >> L >> R;
-
-    if (L == 0)
-    {
-        print(P[R]);
-    }
-    else
-    {
-        print(P[R] - P[L-1]);
-    }
 
     if (L == 0)
     {
@@ -378,6 +170,10 @@ Sum(L, R) = P[R]              if L == 0
 ```
 S = "abcdaefghijkl"
      0123456789...
+convert above string to below array and use prefix-sum approach
+     1000110001000
+Prefix array
+     1111233334444
 ```
 
 Given queries `(L, R)`: count number of vowels (`a`, `e`, `i`, `o`, `u`) in `S[L..R]`.
@@ -401,11 +197,14 @@ Time Complexity: `O(Q*N)`.
 
 This can be optimized using a **prefix count array** (same prefix-sum idea, but tracking cumulative vowel counts instead of cumulative sums) to answer each query in O(1), giving overall `O(N + Q)`.
 
-### Example: Count of even numbers in a range
+### Example: Count of even index numbers in a range
 
 ```
 A = [17, 16, 9, 8, 3, 8, 11, 7, 5]
-     0   1   2 3 4 5 6   7 8
+     0   1   2  3  4  5   6  7  8
+Make contribution of each element as array
+     17 0 9 0 3 0 11 0 5 
+Then perform prefix array
 ```
 (even numbers marked: 16, 8, 8 → contribute to an "is-even" prefix array)
 
